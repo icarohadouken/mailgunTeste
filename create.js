@@ -1,12 +1,13 @@
 import FormData from 'form-data';
 import fetch from 'node-fetch';
+import 'dotenv/config'
 
 async function run() {
   const form = new FormData();
-  form.append('name','rbgsolucoes.shop');
+  form.append('name','mail.qi.plus');
 
   const username = "api"
-  const password = "bb4e209f52de73340c3c53b11f2acb91-8a084751-b2daffa4"
+  const password = process.env.MAILGUN_API
 
   const resp = await fetch(
     `https://api.mailgun.net/v4/domains`,

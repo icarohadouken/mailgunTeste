@@ -1,7 +1,8 @@
 import fetch from 'node-fetch';
+import 'dotenv/config'
 
   const username = "api"
-  const password = "bb4e209f52de73340c3c53b11f2acb91-8a084751-b2daffa4"
+  const password = process.env.MAILGUN_API
 
 async function run() {
   const resp = await fetch(

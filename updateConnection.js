@@ -7,9 +7,9 @@ import 'dotenv/config'
 async function run() {
   const name = 'mail.qi.plus';
   const resp = await fetch(
-    `https://api.mailgun.net/v4/domains/${name}`,
+    `https://api.mailgun.net/v4/domains/${name}/verify`,
     {
-      method: 'GET',
+      method: 'PUT',
       headers: {
         Authorization: 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64')
       }
